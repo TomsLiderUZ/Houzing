@@ -1,0 +1,376 @@
+.homeContentWrapper {
+  width: 100%;
+  height: max-content;
+}
+
+.homeContentTopCaruselWrapper {
+  width: 100%;
+  height: 571px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homeContentTopCaruselTextsWrapper {
+  position: absolute;
+  width: 100%;
+  height: 571px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 0 au;
+  color: white;
+  z-index: 200;
+}
+.homeContentTopCaruselTextItemTitleTxt {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 44px;
+  font-weight: 700;
+  margin-top: 134px;
+}
+
+.homeContentTopCaruselTextItemTxt {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.homeContentTopCaruselTextItemRommsAddBg {
+  width: 100%;
+  height: 47px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  gap: 24px;
+}
+
+.homeContentTopCaruselTextItemRommsAddItemBg {
+  width: max-content;
+  height: max-content;
+  /* background-color: rgb(39, 15, 255); */
+}
+
+.homeContentTopCaruselTextItemRommsAddItemIconBg {
+  width: 100%;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(66, 66, 15); */
+}
+
+.homeContentTopCaruselTextItemRommsAddItemTxtBg {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+  color: white;
+  text-wrap: nowrap;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  /* background-color: rgb(10, 71, 71); */
+}
+
+.homeContentTopCaruselTextMonyBg {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.homeContentTopCaruselTextButtonBg {
+  width: 180px;
+  height: 44px;
+  border-radius: 2px;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 48px;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.2s linear;
+  background-color: transparent;
+}
+.homeContentTopCaruselTextButtonBg:hover{
+  background-color: white;
+  color: var(--bgWrapper);
+}
+
+
+.homeContentTopCaruselTextItemsBg {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.homeContentTopCaruselImg {
+  width: 100%;
+  height: 571px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.homeContentTopCaruselControlsBg {
+  width: 100%;
+  height: 571px;
+  position: absolute;
+  background: #000000a6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeContentTopCaruselControlsGetNuberBtnsWarpper {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  box-sizing: border-box;
+  padding: 0 0 32px 0;
+}
+
+.homeContentTopCaruselControlsGetNuberButtonCirclesBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+.homeContentTopCaruselControlsGetUpBtnBg {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hctccgubb_1 {
+  justify-content: left;
+  padding: 0 0 0 32px;
+}
+
+.hctccgubb_2 {
+  justify-content: right;
+  padding: 0 32px 0 0;
+}
+
+.homeContentTopCaruselControlsGetUpButton {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5000px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s linear;
+  position: relative;
+  z-index: 500;
+}
+
+.homeContentTopCaruselControlsGetUpButton:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.homeContentTopCaruselControlsGetNuberButtonCircle {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 5000px;
+  cursor: pointer;
+}
+
+.unicalModalWarpper {
+  position: absolute;
+  z-index: 500;
+  width: 920px;
+  height: 409px;
+  border-radius: 5px;
+  background-color: white;
+  margin-right: 130px;
+  margin-top: 74px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: all 0.4s linear;
+}
+
+.unicalModalBottomContent {
+  width: 100%;
+  height: 84px;
+  background-color: #f6f8f9;
+  border-top: 1px solid #e6e9ec;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30px 0 0;
+}
+
+.unicalModalTopContent {
+  width: 100%;
+  height: 325px;
+  box-sizing: border-box;
+  padding: 20px 0 0 30px;
+}
+
+.unicalModalTopContentRow {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  flex-wrap: wrap;
+  /* background-color: greenyellow; */
+}
+
+.unicalModalTopContentRowTitleBg {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bgWrapper);
+}
+
+.unicalModalTopContentRowInpsBg {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+.unicalModalTopContentRowInputItem {
+  width: 200px;
+  height: 44px;
+  border-radius: 2px;
+  border: 1px solid #e6e9ec;
+  color: var(--bgWrapper);
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 0 0 0 16px;
+}
+
+.unicalModalBottomContentButton {
+  width: 128px;
+  height: 44px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  transition: all 0.2s linear;
+}
+
+.unicalModalBottomContent .A {
+  color: var(--bgWrapper);
+  border: 1px solid var(--bgWrapper);
+}
+
+.unicalModalBottomContent .B {
+  color: white;
+  border: 1px solid var(--colorPrimary);
+  background-color: var(--colorPrimary);
+  margin-left: 20px;
+}
+
+.unicalModalBottomContent .B:hover {
+  background-color: var(--bgWrapper);
+  border-color: var(--bgWrapper);
+  color: white;
+}
+
+.unicalModalBottomContent .A:hover {
+  background-color: var(--bgWrapper);
+  border-color: var(--bgWrapper);
+  color: white;
+}
+
+.homeContentTopCaruselItemImg {
+  position: absolute;
+  transition: all 0.3s linear;
+}
+
+.homeContentHauseImgMoreAboutsBtnCardWrapper {
+  width: 100%;
+  height: 571px;
+  margin-top: 96px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./src/assets/img/carusel_img_3.png");
+}
+
+.homeContentHauseImgMoreAboutsBtnCardTextAndBtnBg {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: #000000a6;
+}
+.homeContentHauseImgMoreAboutsBtnCardTextsBg {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 204px;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+.homeContentHauseImgMoreAboutsBtnCardButtonBg {
+  width: 180px;
+  height: 44px;
+  border-radius: 2px;
+  background-color: var(--colorPrimary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 324px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}

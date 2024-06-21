@@ -1,0 +1,56 @@
+.CategoryCardCaruselWarpper {
+  width: 100%;
+  height: 500px;
+  margin-top: 96px;
+}
+.CategoryCardCaruselCardsBg {
+  margin-top: 32px;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.CategoryAllCardItemsBg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.CategoryAllCardWrapper {
+  width: 260px;
+  height: 350px;
+  border-radius: 3px;
+  background-size: cover cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.CategoryAllCardAsIcon {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 145px;
+}
+
+.CategoryAllCardAsTitle {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 229px;
+}

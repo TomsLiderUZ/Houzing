@@ -1,0 +1,117 @@
+.footerWrapper {
+  width: 100%;
+  height: 417px;
+  background-color: var(--bgWrapper);
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.footerBottomItemsWrapper {
+  width: 100%;
+  height: 68px;
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.footerBottomItemLogo {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 0 0 130px;
+}
+
+.footerBottomItemTextBg {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 130px 0 0;
+}
+
+.footerBottomItemText {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+
+.footerTopItemsWrapper {
+  width: 100%;
+  height: 348px;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  gap: 172px;
+  box-sizing: border-box;
+  padding: 48px 130px 0 130px;
+}
+
+.footerTopItemRow {
+  width: max-content;
+  height: max-content;
+}
+
+.footerTopItemRowTitleText {
+  width: max-content;
+  height: 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.footerTopItemRowGapBg {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.footerTopItemRowGapText {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footerTopItemRowLinksBg {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  gap: 11px;
+  margin-top: 12px;
+  margin-left: -12px;
+}
+
+.footerTopItemRowLinkCard {
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+.footerTopItemRowLinkCard:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.footerTopItemRowLinkCard:active{
+  background-color: var(--colorPrimary);
+}

@@ -1,0 +1,59 @@
+.WhyChooseUsWrapper {
+  width: 100%;
+  height: 434px;
+  background-color: var(--bgContent);
+  margin-top: 48px;
+  box-sizing: border-box;
+  padding: 48px 0 0 0;
+}
+
+.WhyChooseUsCardsBg {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  margin-top: 40px;
+  gap: 77px;
+  box-sizing: border-box;
+  padding: 0 130px;
+}
+
+.WhyChooseUsCardWrapper {
+  width: 235px;
+  height: 230px;
+}
+
+.WhyChooseUsCardIconBg {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.WhyChooseUsCardTitleBg {
+  margin-top: 24px;
+  width: 100%;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--bgWrapper);
+  text-wrap: nowrap;
+}
+
+.WhyChooseUsCardAbutBg {
+  margin-top: 8px;
+  width: 100%;
+  height: 28px;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--txtColor);
+}

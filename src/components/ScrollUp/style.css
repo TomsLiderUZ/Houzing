@@ -1,0 +1,29 @@
+.ScrollUpButtonWrapper {
+  width: 45px;
+  height: 45px;
+  background-color: var(--colorPrimary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 12px;
+  margin-bottom: 11px;
+  z-index: 9999999;
+  cursor: pointer;
+  transition: opacity 0.2s linear, transform 0.1s linear, margin 0.2s linear;
+  opacity: 0.5;
+  border: 0;
+}
+
+.ScrollUpButtonWrapper:hover{
+    transform: scale(1.1);
+}
+
+.ScrollUpButtonWrapper:active{
+    transform: scale(0.9);
+}
+
+

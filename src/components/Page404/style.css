@@ -1,0 +1,73 @@
+.Page404_Wrapper {
+  width: 100%;
+  height: max-content;
+}
+
+.Page404_ContentWrapper {
+  width: 100%;
+  min-height: 90vh;
+  margin-top: 40px;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.Page404_ContentWallWrapper {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url("../../assets/img/Page404HolleWall_1.png");
+  background-size: cover;
+  background-position: center;
+  cursor: default
+}
+
+  
+
+
+
+
+.Page404_ContentWallCenterTxets {
+  width: 250px;
+  margin-left: -20px;
+  /* margin-top: -10px; */
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  /* background-color: yellow; */
+  color: white;
+}
+
+.Page404_ContentTextNumebr {
+  width: 100%;
+  height: max-content;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 90px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.Page404_ContentTextLorem {
+  width: 100%;
+  height: max-content;
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 35px;
+  text-wrap: nowrap;
+}
