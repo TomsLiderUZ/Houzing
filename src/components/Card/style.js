@@ -22,6 +22,14 @@ export const CardItemBg = styled.div`
     width: 343px;
   }
 
+  @media only screen and (max-width: 350px) {
+    width: 300px;
+  }
+
+  @media only screen and (max-width: 300px) {
+    width: 250px;
+  }
+
 `;
 
 export const CardItemTopItemsBg = styled.div`
@@ -43,6 +51,12 @@ export const CardItemTopImgTopTitlesWrapper = styled.div`
 
   @media only screen and (max-width: 759px) {
     width: 343px;
+  }
+  @media only screen and (max-width: 350px) {
+    width: 300px;
+  }
+  @media only screen and (max-width: 300px) {
+    width: 250px;
   }
 `;
 
@@ -106,6 +120,12 @@ export const CardItemBottomItemsRowUserLogoWrapper = styled.div`
 
   @media only screen and (max-width: 759px) {
     width: 343px;
+  }
+  @media only screen and (max-width: 350px) {
+    width: 300px;
+  }
+  @media only screen and (max-width: 300px) {
+    width: 250px;
   }
 `;
 
@@ -173,7 +193,14 @@ export const CardItemBottomItemsRow_2 = styled.div`
   @media only screen and (max-width: 759px) {
     gap: 25px;
   }
+  @media only screen and (max-width: 350px) {
+    gap: 15px;
+  }
+  @media only screen and (max-width: 300px) {
+    gap: 10px;
+  }
 `;
+
 
 export const CardItemBottomItemsRow_3 = styled.div`
   width: 100%;

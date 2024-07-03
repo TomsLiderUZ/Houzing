@@ -24,6 +24,42 @@ function ContentTopMenu() {
   // Alert end
 
 
+
+  const [topMenuSt1, setTopMenuSt1] = useState("relative");
+  const [topMenuSt2, setTopMenuSt2] = useState("0");
+  const [topMenuSt3, setTopMenuSt3] = useState("var(--bgWrapper)");
+  const [topMenuSt4, setTopMenuSt4] = useState("var(--bgWrapper)");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (document.body.offsetWidth <= 750) {
+        setTopMenuSt3("var(--colorPrimary)")
+        setTopMenuSt4("var(--colorPrimary)")
+        if (location.pathname === "/home") {
+          setTopMenuSt1("absolute");
+          setTopMenuSt2("508px");
+        } else {
+          setTopMenuSt1("relative");
+          setTopMenuSt2("24px");
+        }
+      } else {
+        setTopMenuSt3("var(--bgWrapper)")
+        setTopMenuSt4("#E6E9EC")
+        setTopMenuSt1("relative");
+        setTopMenuSt2("0");
+      }
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
+
+
   const [modal, setModal] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [address, setAddress] = useState({
@@ -43,6 +79,7 @@ function ContentTopMenu() {
   });
 
   useEffect(() => {
+
     const params = new URLSearchParams(window.location.search);
     const countryParam = params.get('country') || "";
     const regionParam = params.get('region') || "";
@@ -98,73 +135,78 @@ function ContentTopMenu() {
     }
 
     const queryStringLoc = `?country=${address.country}&region=${address.region}&city=${address.city}&zipCode=${address.zipCode}`;
-    setSearchValue(`${address.country} / ${address.region} / ${address.city} / ${address.zipCode}`); // Update searchValue with the query string
+    setSearchValue(`${address.country} / ${address.region} / ${address.city} / ${address.zipCode}`); 
 
 
     navigate(`/properties${queryStringLoc}`);
 
     chengeModal();
-    resetForm(); 
+    resetForm();
   };
 
 
   return (
     <>
       <Alert showAlert={alertGet} showText={alertText} onHide={hideAlert} />
-      
+
       {/* Modal content */}
-      <div className="ContentTopMenu">
-        <div className="ContentTopMenuTitleBar">
-          {HausesSvg}
-          <input className='ContentTopMenuTitleBarInp' type="text" placeholder='Enter an address, neighborhood, city, or ZIP code' value={searchValue} readOnly />
-        </div>
-        <div className="ContentTopMenuBtnWrapper">
-          <div className="ContentTopMenuButton ContentTopMenuButton_1" onClick={chengeModal} style={{ backgroundColor: modal ? "var(--bgWrapper)" : "transparent", color: modal ? "white" : "var(--bgWrapper)", borderColor: modal ? "var(--bgWrapper)" : "#E6E9EC" }}>
-            {FilterSvg}&nbsp;
-            Advanced
+      <div className="ContentTopMenuWrapper" style={{ position: topMenuSt1, marginTop: topMenuSt2, marginBottom: modal ? location.pathname === "/properties" ? "390px" : "0px": "0px"}}>
+        <div className="ContentTopMenu">
+          <div className="ContentTopMenuTitleBar">
+            {HausesSvg}
+            <input className='ContentTopMenuTitleBarInp' type="text" placeholder='Enter an address, neighborhood, city, or ZIP code' value={searchValue} readOnly />
           </div>
-          <div className="ContentTopMenuButton ContentTopMenuButton_2">
-            {SerachSvg}&nbsp;
-            Search
+          <div className="ContentTopMenuBtnWrapper">
+            <div className="ContentTopMenuButton ContentTopMenuButton_1" onClick={chengeModal} style={{ backgroundColor: modal ? "var(--bgWrapper)" : "transparent", color: modal ? "white" : topMenuSt3, borderColor: modal ? "var(--bgWrapper)" : topMenuSt4 }}>
+              {FilterSvg}&nbsp;
+              Advanced
+            </div>
+            <div className="ContentTopMenuButton ContentTopMenuButton_2">
+              {SerachSvg}&nbsp;
+              Search
+            </div>
+          </div>
+        </div>
+
+
+        {/* Modal */}
+        <div className="unicalModalWarpper" style={{ marginTop: modal ? "500px" : "-1000px", opacity: modal ? "1" : "0" }}>
+          <div className="unicalModalTopContent">
+            <div className="unicalModalTopContentRow">
+              <div className="unicalModalTopContentRowTitleBg">Address</div>
+              <div className="unicalModalTopContentRowInpsBg">
+                <input type="text" placeholder="Country" className="unicalModalTopContentRowInputItem" value={address.country} onChange={(e) => setAddress({ ...address, country: e.target.value })} />
+                <input type="text" placeholder="Region" className="unicalModalTopContentRowInputItem" value={address.region} onChange={(e) => setAddress({ ...address, region: e.target.value })} />
+                <input type="text" placeholder="City" className="unicalModalTopContentRowInputItem" value={address.city} onChange={(e) => setAddress({ ...address, city: e.target.value })} />
+                <input type="text" placeholder="Zip code" className="unicalModalTopContentRowInputItem" value={address.zipCode} onChange={(e) => setAddress({ ...address, zipCode: e.target.value })} />
+              </div>
+            </div>
+
+            <div className="unicalModalTopContentRow">
+              <div className="unicalModalTopContentRowTitleBg">Apartment info</div>
+              <div className="unicalModalTopContentRowInpsBg">
+                <input type="text" placeholder="Rooms" className="unicalModalTopContentRowInputItem" value={apartmentInfo.rooms} onChange={(e) => setApartmentInfo({ ...apartmentInfo, rooms: e.target.value })} />
+                <input type="text" placeholder="Size" className="unicalModalTopContentRowInputItem" value={apartmentInfo.size} onChange={(e) => setApartmentInfo({ ...apartmentInfo, size: e.target.value })} />
+                <input type="text" placeholder="Sort" className="unicalModalTopContentRowInputItem" value={apartmentInfo.sort} onChange={(e) => setApartmentInfo({ ...apartmentInfo, sort: e.target.value })} />
+              </div>
+            </div>
+
+            <div className="unicalModalTopContentRow">
+              <div className="unicalModalTopContentRowTitleBg">Price</div>
+              <div className="unicalModalTopContentRowInpsBg">
+                <input type="text" placeholder="Min price" className="unicalModalTopContentRowInputItem" value={price.minPrice} onChange={(e) => setPrice({ ...price, minPrice: e.target.value })} />
+                <input type="text" placeholder="Max price" className="unicalModalTopContentRowInputItem" value={price.maxPrice} onChange={(e) => setPrice({ ...price, maxPrice: e.target.value })} />
+              </div>
+            </div>
+          </div>
+          <div className="unicalModalBottomContent">
+            <div className="unicalModalBottomContentButton A" onClick={chengeModal}>Cancel</div>
+            <div className="unicalModalBottomContentButton B" onClick={handleSubmit}>Submit</div>
           </div>
         </div>
       </div>
 
-      {/* Modal */}
-      <div className="unicalModalWarpper" style={{ marginTop: modal ? "74px" : "-1000px", opacity: modal ? "1" : "0" }}>
-        <div className="unicalModalTopContent">
-          <div className="unicalModalTopContentRow">
-            <div className="unicalModalTopContentRowTitleBg">Address</div>
-            <div className="unicalModalTopContentRowInpsBg">
-              <input type="text" placeholder="Country" className="unicalModalTopContentRowInputItem" value={address.country} onChange={(e) => setAddress({ ...address, country: e.target.value })} />
-              <input type="text" placeholder="Region" className="unicalModalTopContentRowInputItem" value={address.region} onChange={(e) => setAddress({ ...address, region: e.target.value })} />
-              <input type="text" placeholder="City" className="unicalModalTopContentRowInputItem" value={address.city} onChange={(e) => setAddress({ ...address, city: e.target.value })} />
-              <input type="text" placeholder="Zip code" className="unicalModalTopContentRowInputItem" value={address.zipCode} onChange={(e) => setAddress({ ...address, zipCode: e.target.value })} />
-            </div>
-          </div>
 
-          <div className="unicalModalTopContentRow">
-            <div className="unicalModalTopContentRowTitleBg">Apartment info</div>
-            <div className="unicalModalTopContentRowInpsBg">
-              <input type="text" placeholder="Rooms" className="unicalModalTopContentRowInputItem" value={apartmentInfo.rooms} onChange={(e) => setApartmentInfo({ ...apartmentInfo, rooms: e.target.value })} />
-              <input type="text" placeholder="Size" className="unicalModalTopContentRowInputItem" value={apartmentInfo.size} onChange={(e) => setApartmentInfo({ ...apartmentInfo, size: e.target.value })} />
-              <input type="text" placeholder="Sort" className="unicalModalTopContentRowInputItem" value={apartmentInfo.sort} onChange={(e) => setApartmentInfo({ ...apartmentInfo, sort: e.target.value })} />
-            </div>
-          </div>
-
-          <div className="unicalModalTopContentRow">
-            <div className="unicalModalTopContentRowTitleBg">Price</div>
-            <div className="unicalModalTopContentRowInpsBg">
-              <input type="text" placeholder="Min price" className="unicalModalTopContentRowInputItem" value={price.minPrice} onChange={(e) => setPrice({ ...price, minPrice: e.target.value })} />
-              <input type="text" placeholder="Max price" className="unicalModalTopContentRowInputItem" value={price.maxPrice} onChange={(e) => setPrice({ ...price, maxPrice: e.target.value })} />
-            </div>
-          </div>
-        </div>
-        <div className="unicalModalBottomContent">
-          <div className="unicalModalBottomContentButton A" onClick={chengeModal}>Cancel</div>
-          <div className="unicalModalBottomContentButton B" onClick={handleSubmit}>Submit</div>
-        </div>
-      </div>
     </>
   );
 }

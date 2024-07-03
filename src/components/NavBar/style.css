@@ -105,6 +105,7 @@
   width: max-content;
   height: max-content;
 }
+
 .NavItemsBgJoinMobile {
   display: none;
   cursor: pointer;
@@ -124,10 +125,12 @@
   display: none;
   transition: all 0.3s linear;
 }
+
 .NavItemsBgLinksBgMobileTop {
   width: 100%;
   height: max-content;
 }
+
 .NavItemsBgLinksBgMobileCloseBtn {
   width: 24px;
   height: 24px;
@@ -137,6 +140,7 @@
   margin: 22px 0 0 16px;
   cursor: pointer;
 }
+
 .NavItemsBgLinksBgMobileBottom {
   width: 100%;
   height: max-content;
@@ -155,6 +159,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .NavItemsBgLinksBgMobileLinkBg {
   width: 100%;
   height: 28px;
@@ -168,6 +173,7 @@
   font-weight: 500;
   color: var(--bgWrapper);
 }
+
 .NavItemsBgLinksBgMobileLinkBg:hover {
   color: var(--colorPrimary);
 }
@@ -183,6 +189,7 @@
   flex-wrap: nowrap;
   gap: 11px;
 }
+
 .NavItemsBgLinksBgMobileLinkMoreItemBg {
   width: 36px;
   height: 36px;
@@ -192,17 +199,22 @@
   align-items: center;
   transition: all 0.2s linear;
 }
+
 .NavItemsBgLinksBgMobileLinkMoreItemBg:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+
+
+
 @media only screen and (max-width: 1396px) {
-  .NavItemsBgLogo{
+  .NavItemsBgLogo {
     left: 0;
     margin-right: 0;
     margin-left: 130px;
   }
-  .NavItemsBgJoin{
+
+  .NavItemsBgJoin {
     right: 0;
     margin-left: 0;
     margin-right: 130px;
@@ -210,24 +222,32 @@
 }
 
 @media only screen and (max-width: 980px) {
-  .NavItemsBgLogo{
+  .NavItemsBgLogo {
     margin-left: 50px;
   }
-  .NavItemsBgJoin{
+
+  .NavItemsBgJoin {
     margin-right: 50px;
   }
 }
 
 @media only screen and (max-width: 750px) {
-  .NavWrapper{
+  .Container {
+    padding: 60px 0 0 0;
+  }
+
+  .NavWrapper {
     height: 60px;
   }
+
   .NavItemsBgLink {
     display: none;
   }
+
   .NavItemsJoinBtnBg {
     display: none;
   }
+
   .NavWrapper {
     justify-content: center;
   }
@@ -274,6 +294,7 @@
     margin-left: 30px;
   }
 } */
+
 
 
 @media only screen and (max-width: 759px) {

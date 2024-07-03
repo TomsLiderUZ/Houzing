@@ -12,6 +12,7 @@ export const PropContents = styled.div`
   padding: 64px 0 0 0;
   box-sizing: border-box;
   overflow: hidden;
+
 `;
 
 export const PropContentCardsFilterBg = styled.div`
