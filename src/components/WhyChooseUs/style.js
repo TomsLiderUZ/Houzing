@@ -1,14 +1,15 @@
-.WhyChooseUsWrapper {
+import styled from 'styled-components';
+
+export const WhyChooseUsWrapper = styled.div`
   width: 100%;
   min-height: 434px;
   height: max-content;
   background-color: var(--bgContent);
   margin-top: 48px;
   box-sizing: border-box;
-  /* padding: 48px 0 0 0; */
-}
+`;
 
-.WhyChooseUsCardsBg {
+export const WhyChooseUsCardsBg = styled.div`
   width: 100%;
   height: max-content;
   display: flex;
@@ -19,23 +20,22 @@
   gap: 77px;
   row-gap: 32px;
   box-sizing: border-box;
-  /* padding: 0 130px; */
-}
+`;
 
-.WhyChooseUsCardWrapper {
+export const WhyChooseUsCardWrapper = styled.div`
   width: 235px;
   height: 230px;
-}
+`;
 
-.WhyChooseUsCardIconBg {
+export const WhyChooseUsCardIconBg = styled.div`
   width: 100%;
   height: max-content;
   display: flex;
   justify-content: center;
   align-items: start;
-}
+`;
 
-.WhyChooseUsCardTitleBg {
+export const WhyChooseUsCardTitleBg = styled.p`
   margin-top: 24px;
   width: 100%;
   height: 28px;
@@ -47,9 +47,9 @@
   font-weight: 600;
   color: var(--bgWrapper);
   text-wrap: nowrap;
-}
+`;
 
-.WhyChooseUsCardAbutBg {
+export const WhyChooseUsCardAbutBg = styled.p`
   margin-top: 8px;
   width: 100%;
   height: 28px;
@@ -59,4 +59,4 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--txtColor);
-}
+`;

@@ -1,92 +1,281 @@
 .Container {
-    width: 100%;
-    height: 100vh;
-    padding: 64px 0 0 0;
+  width: 100%;
+  min-height: 100vh;
+  height: max-content;
+  padding: 64px 0 0 0;
+  overflow: hidden;
+  position: absolute;
 }
 
 .NavWrapper {
-    width: 100%;
-    height: 64px;
-    background-color: var(--bgWrapper);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    position: fixed;
-    z-index: 999999;
-    top: 0;
+  width: 100%;
+  height: 64px;
+  background-color: var(--bgWrapper);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
 }
 
 .NavItemsBg {
-    height: 100%;
+  height: max-content;
 }
 
 .NavItemsBgLogo {
-    width: 28%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    /* background-color: green; */
-    box-sizing: border-box;
-    padding: 0 0 0 130px;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* background-color: green; */
+  box-sizing: border-box;
+  position: absolute;
+  /* left: 0; */
+  margin-right: 1000px;
 }
 
 .NavItemsBgLink {
-    width: 35%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* background-color: orange; */
+  width: max-content;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 64px;
+  /* background-color: orange; */
+  position: absolute;
 }
 
 .NavItemsBgJoin {
-    width: 25%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    /* background-color: red; */
-    box-sizing: border-box;
-    padding: 0 130px 0 0;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  /* background-color: aqua; */
+  box-sizing: border-box;
+  position: absolute;
+  /* right: 0; */
+  margin-left: 1000px;
 }
 
-
 .NavItemLinks {
-    width: max-content;
-    height: max-content;
-    padding: 10px;
-    /* background-color: red; */
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s linear;
+  width: max-content;
+  height: 24px;
+  padding: 10px;
+  /* background-color: rgb(255, 0, 234); */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s linear;
+  padding: 0;
 }
 
 .NavItemLinks:hover {
-    border-bottom: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
-
-
 .NavItemsJoinBtnBg {
-    width: 120px;
-    height: 44px;
-    border-radius: 2px;
-    border: 1px solid white;
-    font-size: 14px;
-    font-weight: 400;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.2s linear;
+  width: 120px;
+  height: 44px;
+  border-radius: 2px;
+  border: 1px solid white;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 .NavItemsJoinBtnBg:hover {
-    background-color: white;
-    color: #0D263B;
+  background-color: white;
+  color: #0d263b;
 }
 
+.NavItemsBgNavMenuBtn {
+  display: none;
+  cursor: pointer;
+  width: max-content;
+  height: max-content;
+}
+.NavItemsBgJoinMobile {
+  display: none;
+  cursor: pointer;
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  right: 0;
+}
 
+.NavItemsBgLinksBgMobileWrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  z-index: 9999999999999999;
+  top: 0;
+  display: none;
+  transition: all 0.3s linear;
+}
+.NavItemsBgLinksBgMobileTop {
+  width: 100%;
+  height: max-content;
+}
+.NavItemsBgLinksBgMobileCloseBtn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 22px 0 0 16px;
+  cursor: pointer;
+}
+.NavItemsBgLinksBgMobileBottom {
+  width: 100%;
+  height: max-content;
+  /* background-color: red; */
+  padding: 172px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.NavItemsBgLinksBgMobileLinksWrapper {
+  width: max-content;
+  height: max-content;
+  /* background-color: red; */
+  row-gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.NavItemsBgLinksBgMobileLinkBg {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-wrap: nowrap;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--bgWrapper);
+}
+.NavItemsBgLinksBgMobileLinkBg:hover {
+  color: var(--colorPrimary);
+}
+
+.NavItemsBgLinksBgMobileLinkMoresWrapper {
+  width: 100%;
+  height: max-content;
+  /* background-color: red; */
+  margin-top: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 11px;
+}
+.NavItemsBgLinksBgMobileLinkMoreItemBg {
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+.NavItemsBgLinksBgMobileLinkMoreItemBg:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 1396px) {
+  .NavItemsBgLogo{
+    left: 0;
+    margin-right: 0;
+    margin-left: 130px;
+  }
+  .NavItemsBgJoin{
+    right: 0;
+    margin-left: 0;
+    margin-right: 130px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .NavItemsBgLogo{
+    margin-left: 50px;
+  }
+  .NavItemsBgJoin{
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .NavWrapper{
+    height: 60px;
+  }
+  .NavItemsBgLink {
+    display: none;
+  }
+  .NavItemsJoinBtnBg {
+    display: none;
+  }
+  .NavWrapper {
+    justify-content: center;
+  }
+
+  .NavItemsBgLinksBgMobileWrapper {
+    display: block;
+  }
+
+  .NavItemsBgLogo {
+    padding: 0;
+    margin-left: 0;
+    left: auto;
+    position: absolute;
+  }
+
+  .NavItemsBgNavMenuBtn {
+    display: block;
+    margin-left: 16px;
+    position: absolute;
+    left: 0;
+    /* background-color: red; */
+  }
+
+  .NavItemsBgJoinMobile {
+    display: flex;
+    margin-right: 22px;
+  }
+}
+
+/* @media only screen and (max-width: 375px) {
+  .NavWrapper {
+    justify-content: center;
+  }
+} */
+
+/* @media only screen and (max-width: 350px) {
+  .NavItemsBgLogo {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  .NavItemsBgLogo {
+    margin-left: 30px;
+  }
+} */
+
+
+@media only screen and (max-width: 759px) {
+  
+}

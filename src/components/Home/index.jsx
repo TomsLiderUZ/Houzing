@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./style.css"
 import CardCarusel from '../CardCarusel/Index.jsx';
-import Footer from "../Footer/Index.jsx"
+import Footer from "../Footer/Footer.jsx"
 import UsersCarusel from "../UsersCarusel/Index.jsx"
 import WhyChooseUs from "../WhyChooseUs/WhyChooseUs.jsx"
 import Category from '../Category/Category.jsx';
@@ -106,9 +106,9 @@ function Home() {
         </div>
       </div> 
 
-      <CardCarusel title={"Recommended"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."}/>
-      <WhyChooseUs title={"Why Choose Us?"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."}/>
-      <Category title={"Category"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."}/>
+      <CardCarusel title={"Recommended"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."} minAbout={"112 Glenwood Ave Hyde Park, Boston, MA"}/>
+      <WhyChooseUs title={"Why Choose Us?"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."} minAbout={"112 Glenwood Ave Hyde Park, Boston, MA"}/>
+      <Category title={"Category"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."} minAbout={"112 Glenwood Ave Hyde Park, Boston, MA"}/>
       <div className="homeContentHauseImgMoreAboutsBtnCardWrapper">
         <div className="homeContentHauseImgMoreAboutsBtnCardTextAndBtnBg">
           <p className="homeContentHauseImgMoreAboutsBtnCardTextsBg">
@@ -119,8 +119,8 @@ function Home() {
           <button className="homeContentHauseImgMoreAboutsBtnCardButtonBg">Read more</button>
         </div>
       </div>
-      <CardCarusel title={"Recent Properties for Rent"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."}/>
-      <UsersCarusel title={"Testimonials"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."}/>
+      <CardCarusel title={"Recent Properties for Rent"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."} minAbout={"112 Glenwood Ave Hyde Park, Boston, MA"}/>
+      <UsersCarusel title={"Testimonials"} about={"Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."} minAbout={"112 Glenwood Ave Hyde Park, Boston, MA"}/>
       <Footer />
     </div>
   )

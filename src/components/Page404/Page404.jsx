@@ -1,21 +1,27 @@
-import React from "react";
-import "./style.css";
-import Footer from "../Footer/Index.jsx";
+import React from 'react';
+import Footer from '../Footer/Footer.jsx';
+import {
+  Page404Wrapper,
+  Page404ContentWrapper,
+  Page404ContentWallWrapper,
+  Page404ContentWallCenterTexts,
+  Page404ContentTextNumber,
+  Page404ContentTextLorem,
+} from './style';
 
 function Page404() {
   return (
-    <div className="Page404_Wrapper">
-      <div className="Page404_ContentWrapper">
-        <div className="Page404_ContentWallWrapper">
-          <div className="Page404_ContentWallCenterTxets">
-            <div className="Page404_ContentTextNumebr">404</div>
-            <div className="Page404_ContentTextLorem">Not Found</div>
-          </div>
-        </div>
-      </div>
-
+    <Page404Wrapper>
+      <Page404ContentWrapper>
+        <Page404ContentWallWrapper>
+          <Page404ContentWallCenterTexts>
+            <Page404ContentTextNumber>404</Page404ContentTextNumber>
+            <Page404ContentTextLorem>Not Found</Page404ContentTextLorem>
+          </Page404ContentWallCenterTexts>
+        </Page404ContentWallWrapper>
+      </Page404ContentWrapper>
       <Footer />
-    </div>
+    </Page404Wrapper>
   );
 }
 

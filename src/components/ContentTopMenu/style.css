@@ -84,3 +84,130 @@
   margin-left: 20px;
   transition: all 0.2s linear;
 }
+
+
+
+
+
+
+
+
+
+
+.unicalModalWarpper {
+  position: absolute;
+  z-index: 500;
+  width: 920px;
+  height: 409px;
+  border-radius: 5px;
+  background-color: white;
+  margin-right: 130px;
+  margin-top: 74px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: all 0.4s linear;
+}
+
+.unicalModalBottomContent {
+  width: 100%;
+  height: 84px;
+  background-color: #f6f8f9;
+  border-top: 1px solid #e6e9ec;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30px 0 0;
+}
+
+.unicalModalTopContent {
+  width: 100%;
+  height: 325px;
+  box-sizing: border-box;
+  padding: 20px 0 0 30px;
+}
+
+.unicalModalTopContentRow {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  flex-wrap: wrap;
+  /* background-color: greenyellow; */
+}
+
+.unicalModalTopContentRowTitleBg {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bgWrapper);
+}
+
+.unicalModalTopContentRowInpsBg {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+.unicalModalTopContentRowInputItem {
+  width: 200px;
+  height: 44px;
+  border-radius: 2px;
+  border: 1px solid #e6e9ec;
+  color: var(--bgWrapper);
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 0 0 0 16px;
+  text-align: left;
+}
+
+.unicalModalBottomContentButton {
+  width: 128px;
+  height: 44px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  transition: all 0.2s linear;
+}
+
+.unicalModalBottomContent .A {
+  color: var(--bgWrapper);
+  border: 1px solid var(--bgWrapper);
+}
+
+.unicalModalBottomContent .B {
+  color: white;
+  border: 1px solid var(--colorPrimary);
+  background-color: var(--colorPrimary);
+  margin-left: 20px;
+}
+
+.unicalModalBottomContent .B:hover {
+  background-color: var(--bgWrapper);
+  border-color: var(--bgWrapper);
+  color: white;
+}
+
+.unicalModalBottomContent .A:hover {
+  background-color: var(--bgWrapper);
+  border-color: var(--bgWrapper);
+  color: white;
+}

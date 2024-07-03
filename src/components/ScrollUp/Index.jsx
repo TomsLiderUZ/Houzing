@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import "./style.css";
+import {
+  ScrollUpButtonWrapper,
+  ScrollUpButtonIcon
+} from './style';
 
 function Index() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -9,7 +12,7 @@ function Index() {
     const handleScroll = () => {
       const position = document.documentElement.scrollTop;
       setScrollPosition(position);
-      
+
       if (position > 400) {
         setIsVisible(true);
       } else {
@@ -27,14 +30,10 @@ function Index() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-
-
   return (
-    <>
-        <button className='ScrollUpButtonWrapper' onClick={scrollToTop} style={{marginRight: isVisible ? "12px" : "-50px", opacity: isVisible ? "1" : "0"}}>
-          <img src="./src/assets/icons/down-arrow.svg" alt="Icon" />
-        </button>
-    </>
+    <ScrollUpButtonWrapper onClick={scrollToTop} isVisible={isVisible}>
+      <ScrollUpButtonIcon src="./src/assets/icons/down-arrow.svg" alt="Icon" />
+    </ScrollUpButtonWrapper>
   );
 }
 

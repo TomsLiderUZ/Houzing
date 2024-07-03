@@ -5,6 +5,7 @@ import Properties from "../pages/properties/index"
 import SignUp from "../pages/SignUp/index"
 import LogIn from "../pages/LogIn/index"
 
+
 export const navbar = [
     {
         id: uniqueId,

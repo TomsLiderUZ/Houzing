@@ -1,4 +1,6 @@
-.CardCaruselUpBg {
+import styled from 'styled-components';
+
+export const CardCaruselUpBg = styled.div`
   width: 100%;
   height: max-content;
   display: flex;
@@ -6,32 +8,29 @@
   align-items: start;
   flex-wrap: wrap;
   margin-top: 82px;
-}
+`;
 
-.CardCaruselUpBottomBg {
+export const CardCaruselUpBottomBg = styled.div`
   width: 100%;
   height: 429px;
   margin-top: 28px;
   display: flex;
   justify-content: left;
   align-items: start;
-  /* background-color: green; */
-}
+`;
 
-.CardCaruselUpBottomElement_BtnBG {
+export const CardCaruselUpBottomElement_BtnBG = styled.div`
   height: 100%;
   width: max-content;
   padding: 0 32px;
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
-}
+`;
 
-.CardCaruselUpBottomElementButton {
+export const CardCaruselUpBottomElementButton = styled.div`
   width: 45px;
   height: 45px;
-  top: 3532px;
   border: 1px solid #e6e9ec;
   display: flex;
   justify-content: center;
@@ -39,27 +38,23 @@
   border-radius: 5000px;
   cursor: pointer;
   transition: all 0.2s linear;
-  box-shadow: 0px 8px 15px 0px #0000000f, 0px 7px 46px 0px #0000000f,
-    0px 20px 38px 0px #0000000f;
-}
-.CardCaruselUpBottomElementButton:hover {
-  background-color: #00000028;
-}
+  box-shadow: 0px 8px 15px 0px #0000000f, 0px 7px 46px 0px #0000000f, 0px 20px 38px 0px #0000000f;
 
-.CardCaruselUpBottomElement_Cards {
+  &:hover {
+    background-color: #00000028;
+  }
+`;
+
+export const CardCaruselUpBottomElement_Cards = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /* background-color: green; */
-  box-sizing: border-box;
-}
+`;
 
-
-
-.CardCaruselUpNuberBtmsWrapper{
+export const CardCaruselUpNuberBtmsWrapper = styled.div`
   width: 100%;
   height: 10px;
   display: flex;
@@ -67,16 +62,12 @@
   align-items: center;
   gap: 13px;
   margin-top: 32px;
-}
+`;
 
-.CardCaruselUpNuberButtonItemBg{
+export const CardCaruselUpNuberButtonItemBg = styled.div`
   width: 8px;
   height: 8px;
   background-color: var(--colorPrimary);
   border-radius: 5000px;
   cursor: pointer;
-}
-
-
-
-
+`;
