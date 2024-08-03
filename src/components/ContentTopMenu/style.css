@@ -6,11 +6,12 @@
   align-items: center;
   margin-bottom: 390px;
   transition: all 0.37s linear;
+  /* background-color: green; */
 }
 
 
 .ContentTopMenu {
-  width: 100%;
+  width: 1390px;
   min-height: 64px;
   height: max-content;
   /* background-color: red; */
@@ -77,6 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .ContentTopMenuButton:hover {
@@ -117,28 +119,70 @@
 
 
 
-.unicalModalWarpper {
+
+.unicalModalContiner {
+  width: 100%;
+  height: max-content;
   position: absolute;
   z-index: 500;
+  /* margin-top: 74px; */
+  /* background-color: green; */
+  transition: all 0.4s linear;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.unicalModalContiner::-webkit-scrollbar {
+  width: 4px;
+} 
+.unicalModalContiner::-webkit-scrollbar-track {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: transparent;
+}  
+.unicalModalContiner::-webkit-scrollbar-thumb {
+  background: var(--txtColor);  
+  transition: 1s all;
+  height: 10px;
+}
+.unicalModalContiner::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;    
+  background: var(--colorPrimary); 
+}
+
+.unicalModalContinerItem {
+  width: 80.5%;
+  height: max-content;
+  display: flex;
+  justify-content: right;
+  align-items: start;
+  /* background-color: purple; */
+}
+
+.unicalModalWarpper {
   width: 920px;
-  height: 409px;
+  min-height: 409px;
+  height: max-content;
   border-radius: 5px;
   background-color: white;
-  margin-right: 130px;
-  margin-top: 74px;
+  /* margin-right: -210px; */
   right: 0;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-wrap: wrap;
   overflow: hidden;
-  transition: all 0.4s linear;
+  /* outline: 1px solid red; */
 }
+
+
 
 .unicalModalBottomContent {
   width: 100%;
   height: 84px;
   background-color: #f6f8f9;
+  border: 0;
   border-top: 1px solid #e6e9ec;
   display: flex;
   justify-content: right;
@@ -149,9 +193,10 @@
 
 .unicalModalTopContent {
   width: 100%;
-  height: 325px;
+  min-height: 325px;
+  height: max-content;
   box-sizing: border-box;
-  padding: 20px 0 0 30px;
+  padding: 20px 30px 0 30px;
 }
 
 .unicalModalTopContentRow {
@@ -177,16 +222,19 @@
 
 .unicalModalTopContentRowInpsBg {
   width: 100%;
-  height: 44px;
+  min-height: 44px;
+  height: max-content;
   display: flex;
   justify-content: left;
   align-items: center;
   margin-bottom: 10px;
   gap: 20px;
+  /* flex-wrap: wrap; */
 }
 
 .unicalModalTopContentRowInputItem {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: 44px;
   border-radius: 2px;
   border: 1px solid #e6e9ec;
@@ -239,11 +287,63 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1396px) {
+  .ContentTopMenu {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .unicalModalContinerItem {
+    width: 79%;
+  }
+}
+
+
+@media only screen and (max-width: 1240px) {
+  .unicalModalContinerItem {
+    width: 78%;
+  }
+}
+
+
+@media only screen and (max-width: 1180px) {
+  .unicalModalContinerItem {
+    width: max-content;
+    justify-content: center;
+  }
+
+  .unicalModalWarpper {
+    width: 78%;
+  }
+}
+
+
 @media only screen and (max-width: 980px) {
   .ContentTopMenu {
     padding: 0 50px 0 50px;
   }
+
+  .unicalModalWarpper {
+    width: 90%;
+  }
 }
+
 
 @media only screen and (max-width: 750px) {
   .ContentTopMenu {
@@ -255,6 +355,10 @@
     background-color: white;
   }
 
+  .unicalModalBottomContentButton{
+    width: 100%;
+  }
+
   .ContentTopMenuBtnWrapper {
     width: 100%;
     justify-content: center;
@@ -263,15 +367,67 @@
   .ContentTopMenuButton {
     width: 100%;
   }
-  .ContentTopMenuButton_1{
+
+  .ContentTopMenuButton_1 {
     border-color: var(--colorPrimary);
     color: var(--colorPrimary);
   }
 
-  .ContentTopMenuTitleBar{
+  .ContentTopMenuTitleBar {
     width: 100%;
     margin: 0;
     border-color: transparent;
     border-bottom-color: #e6e9ec;
+  }
+
+  .unicalModalContiner {
+    position: fixed;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f6f8f9;
+    top: 0;
+  }
+
+  .unicalModalWarpper {
+    width: 100%;
+  }
+
+  .unicalModalContinerItem {
+    width: max-content;
+  }
+
+  .unicalModalTopContentRowInpsBg {
+    flex-wrap: wrap;
+  }
+
+  .unicalModalTopContentRowInputItem {
+    max-width: 100%;
+  }
+
+  .unicalModalBottomContent {
+    justify-content: center;
+    padding: 0 30px;
+  }
+}
+
+
+@media only screen and (max-width: 320px) {
+  .ContentTopMenu {
+    padding: 24px 5px 24px 5px;
+  }
+}
+
+
+@media only screen and (max-width: 290px) {
+  .ContentTopMenuBtnWrapper {
+    flex-wrap: wrap;
+    gap: 0px;
+    row-gap: 20px;
+  }
+
+  .ContentTopMenu {
+    padding: 24px;
   }
 }

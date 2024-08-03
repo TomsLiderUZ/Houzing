@@ -16,6 +16,8 @@ import {
   FooterBottomItemTextBg,
   FooterBottomItemText,
 } from './style';
+import SiteLogo from "../SiteLogo/SiteLogo.jsx";
+
 
 function Index() {
   return (
@@ -25,7 +27,7 @@ function Index() {
           <FooterTopItemRowTitleText>Contact Us</FooterTopItemRowTitleText>
           <FooterTopItemRowGapBg>
             <div className="footerTopItemRowGapIcon">
-              <img src="./src/assets/icons/map.svg" alt="icon" />
+              <img src="../../../../../src/assets/icons/map.svg" alt="icon" />
             </div>
             <FooterTopItemRowGapText>
               329 Queensberry Street, North
@@ -35,29 +37,29 @@ function Index() {
           </FooterTopItemRowGapBg>
           <FooterTopItemRowGapBg>
             <div className="footerTopItemRowGapIcon">
-              <img src="./src/assets/icons/phone.svg" alt="icon" />
+              <img src="../../../../../src/assets/icons/phone.svg" alt="icon" />
             </div>
             <FooterTopItemRowGapText>23 456 7890</FooterTopItemRowGapText>
           </FooterTopItemRowGapBg>
           <FooterTopItemRowGapBg>
             <div className="footerTopItemRowGapIcon">
-              <img src="./src/assets/icons/email.svg" alt="icon" />
+              <img src="../../../../../src/assets/icons/email.svg" alt="icon" />
             </div>
             <FooterTopItemRowGapText>support@houzing.com</FooterTopItemRowGapText>
           </FooterTopItemRowGapBg>
 
           <FooterTopItemRowLinksBg>
             <FooterTopItemRowLinkCard href="/">
-              <img src="./src/assets/icons/facebook.svg" alt="icon" />
+              <img src="../../../../../src/assets/icons/facebook.svg" alt="icon" />
             </FooterTopItemRowLinkCard>
             <FooterTopItemRowLinkCard href="/">
-              <img src="./src/assets/icons/twitter.svg" alt="icon" />
+              <img src="../../../../../src/assets/icons/twitter.svg" alt="icon" />
             </FooterTopItemRowLinkCard>
             <FooterTopItemRowLinkCard href="/">
-              <img src="./src/assets/icons/instagram.svg" alt="icon" />
+              <img src="../../../../../src/assets/icons/instagram.svg" alt="icon" />
             </FooterTopItemRowLinkCard>
             <FooterTopItemRowLinkCard href="/">
-              <img src="./src/assets/icons/linkedin.svg" alt="icon" />
+              <img src="../../../../../src/assets/icons/linkedin.svg" alt="icon" />
             </FooterTopItemRowLinkCard>
           </FooterTopItemRowLinksBg>
         </FooterTopItemRow>
@@ -119,7 +121,7 @@ function Index() {
       <FooterBottomItemsWrapper>
         <FooterBottomItemLogo>
           <Link to="/">
-            <img src="./src/assets/icons/logo.png" alt="logo" />
+            <SiteLogo />
           </Link>
         </FooterBottomItemLogo>
         <FooterBottomItemTextBg>

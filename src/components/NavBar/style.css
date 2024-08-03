@@ -10,9 +10,10 @@
 .NavWrapper {
   width: 100%;
   height: 64px;
-  background-color: var(--bgWrapper);
+  background-color: var(--bgWrapperOnly);
   display: flex;
   justify-content: center;
+  color: #000000;
   align-items: center;
   color: white;
   position: fixed;
@@ -124,11 +125,17 @@
   top: 0;
   display: none;
   transition: all 0.3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
 }
 
 .NavItemsBgLinksBgMobileTop {
   width: 100%;
   height: max-content;
+  /* background-color: red; */
+  padding: 22px 0 0 16px;
 }
 
 .NavItemsBgLinksBgMobileCloseBtn {
@@ -137,24 +144,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 22px 0 0 16px;
   cursor: pointer;
+}
+
+.NavItemsBgLinksBgMobileBottomWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .NavItemsBgLinksBgMobileBottom {
   width: 100%;
   height: max-content;
   /* background-color: red; */
-  padding: 172px 0 0 0;
+  /* padding: 100px 0 0 0; */
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .NavItemsBgLinksBgMobileLinksWrapper {
   width: max-content;
   height: max-content;
-  /* background-color: red; */
+  /* background-color: yellowgreen; */
   row-gap: 24px;
   display: flex;
   flex-wrap: wrap;
@@ -205,7 +220,48 @@
 }
 
 
+.NavItemsBgProfile {
+  width: max-content;
+  height: 100%;
+  position: absolute;
+  margin-left: 1000px;
+  box-sizing: border-box;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.NavItemsBgProfileOpenBtn{
+  width: 45px;
+  height: 45px;
+  font-size: 120%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50000px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  box-sizing: border-box;
+  border: 1px solid white;
+  padding: 2px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  background-position: center;
+  background-size: 100%;
+  text-shadow: #ffffff 0.3px 0.3px, #ffffff 0.5px 0px, #ffffff 0.3px -0.3px, #ffffff 0px -0.5px, #ffffff -0.3px -0.3px, #ffffff -0.5px 0px, #ffffff -0.3px 0.3px, #ffffff 0px 0.5px;
+}
+
+.NavItemsBgProfileOpenBtn::selection{
+  background-color: transparent;
+}
+
+
+.NavItemsBgProfileOpenBtn:scope{
+  background-color: red;
+}
 
 @media only screen and (max-width: 1396px) {
   .NavItemsBgLogo {
@@ -219,6 +275,12 @@
     margin-left: 0;
     margin-right: 130px;
   }
+
+  .NavItemsBgProfile {
+    right: 0;
+    margin-left: 0;
+    margin-right: 130px;
+  }
 }
 
 @media only screen and (max-width: 980px) {
@@ -227,6 +289,10 @@
   }
 
   .NavItemsBgJoin {
+    margin-right: 50px;
+  }
+
+  .NavItemsBgProfile {
     margin-right: 50px;
   }
 }
@@ -275,7 +341,24 @@
     display: flex;
     margin-right: 22px;
   }
+
+  .NavItemsBgProfile {
+    margin-right: 22px;
+  }
+  .NavItemsBgProfileOpenBtn{
+    width: 35px;
+    height: 35px;
+    font-size: 100%;
+    text-shadow: #ffffff 0.1px 0.1px, #ffffff 0.15px 0px, #ffffff 0.1px -0.1px, #ffffff 0px -0.15px, #ffffff -0.1px -0.1px, #ffffff -0.15px 0px, #ffffff -0.1px 0.1px, #ffffff 0px 0.15px;
+
+  }
 }
+
+/* 
+setRetrievedData(value === 'true');
+you!Prof_Active_ID-1.0
+*/
+
 
 /* @media only screen and (max-width: 375px) {
   .NavWrapper {
@@ -297,6 +380,4 @@
 
 
 
-@media only screen and (max-width: 759px) {
-  
-}
+@media only screen and (max-width: 759px) {}

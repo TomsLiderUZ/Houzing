@@ -2,8 +2,10 @@ import uniqueId from "../hooks/useId"
 import Home from "../pages/home/index"
 import NotPage from "../pages/notFound/index"
 import Properties from "../pages/properties/index"
-import SignUp from "../pages/SignUp/index"
+import Register from "../pages/Register/index"
 import LogIn from "../pages/LogIn/index"
+import UserMe from "../pages/UserMe"
+import UserMeEdit from "../pages/UserMeEdit"
 
 
 export const navbar = [
@@ -15,7 +17,6 @@ export const navbar = [
         private: false,
         hidden: false,
     },
-
     {
         id: uniqueId,
         title: "Properties",
@@ -24,25 +25,38 @@ export const navbar = [
         private: false,
         hidden: false,
     },
-
     {
         id: uniqueId,
         title: "LogIn",
-        path: "/login",
+        path: "/user/login",
         element: <LogIn/>,
         private: false,
         hidden: false,
     },
-
     {
         id: uniqueId,
-        title: "SignUp",
-        path: "/signup",
-        element: <SignUp/>,
+        title: "Register",
+        path: "/user/register",
+        element: <Register/>,
         private: false,
         hidden: false,
     },
-
+    {
+        id: uniqueId,
+        title: "Register",
+        path: "/user/me",
+        element: <UserMe/>,
+        private: false,
+        hidden: false,
+    },
+    {
+        id: uniqueId,
+        title: "Register",
+        path: "/user/me/edit",
+        element: <UserMeEdit/>,
+        private: false,
+        hidden: false,
+    },
     {
         id: uniqueId,
         title: "",

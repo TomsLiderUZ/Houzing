@@ -54,25 +54,25 @@ function Card({ id, img, logo, name, about, beds, baths, garage, sqft, oldmony, 
                 <CardItemBottomItemsRow_2>
                     <CardItemBottomItemsRow_2_ItemBg>
                         <CardItemBottomItemsRow_2_ItemIcon>
-                            <img src="./src/assets/icons/bed.svg" alt="icon" />
+                            <img src="../../../../../src/assets/icons/bed.svg" alt="icon" />
                         </CardItemBottomItemsRow_2_ItemIcon>
                         <CardItemBottomItemsRow_2_ItemText>{beds} Beds</CardItemBottomItemsRow_2_ItemText>
                     </CardItemBottomItemsRow_2_ItemBg>
                     <CardItemBottomItemsRow_2_ItemBg>
                         <CardItemBottomItemsRow_2_ItemIcon>
-                            <img src="./src/assets/icons/bath.svg" alt="icon" />
+                            <img src="../../../../../src/assets/icons/bath.svg" alt="icon" />
                         </CardItemBottomItemsRow_2_ItemIcon>
                         <CardItemBottomItemsRow_2_ItemText>{baths} Baths</CardItemBottomItemsRow_2_ItemText>
                     </CardItemBottomItemsRow_2_ItemBg>
                     <CardItemBottomItemsRow_2_ItemBg>
                         <CardItemBottomItemsRow_2_ItemIcon>
-                            <img src="./src/assets/icons/car.svg" alt="icon" />
+                            <img src="../../../../../src/assets/icons/car.svg" alt="icon" />
                         </CardItemBottomItemsRow_2_ItemIcon>
                         <CardItemBottomItemsRow_2_ItemText>{garage} Garage</CardItemBottomItemsRow_2_ItemText>
                     </CardItemBottomItemsRow_2_ItemBg>
                     <CardItemBottomItemsRow_2_ItemBg>
                         <CardItemBottomItemsRow_2_ItemIcon>
-                            <img src="./src/assets/icons/ruler.svg" alt="icon" />
+                            <img src="../../../../../src/assets/icons/ruler.svg" alt="icon" />
                         </CardItemBottomItemsRow_2_ItemIcon>
                         <CardItemBottomItemsRow_2_ItemText>{sqft} Sq Ft</CardItemBottomItemsRow_2_ItemText>
                     </CardItemBottomItemsRow_2_ItemBg>
@@ -84,10 +84,10 @@ function Card({ id, img, logo, name, about, beds, baths, garage, sqft, oldmony, 
                     </CardItemBottomItemsRow_3LeftItmesBg>
                     <CardItemBottomItemsRow_3RightItmesBg>
                         <CardItemBottomItemsRow_3RightItmesBtnBg>
-                            <img src="./src/assets/icons/resize.svg" alt="icon" />
+                            <img src="../../../../../src/assets/icons/resize.svg" alt="icon" />
                         </CardItemBottomItemsRow_3RightItmesBtnBg>
                         <CardItemBottomItemsRow_3RightItmesBtnBg className="C-C-U-B-E-C-B-I-R-3-R-I-B-B__2">
-                            <img src="./src/assets/icons/love.svg" alt="icon" />
+                            <img src="../../../../../src/assets/icons/love.svg" alt="icon" />
                         </CardItemBottomItemsRow_3RightItmesBtnBg>
                     </CardItemBottomItemsRow_3RightItmesBg>
                 </CardItemBottomItemsRow_3>

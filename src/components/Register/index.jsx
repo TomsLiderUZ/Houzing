@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer.jsx";
 import Alert from "../Alert/Index.jsx";
-import { useActiveInfo } from '../../hooks/ActiveInfo.js';
 import {
   Container,
   ContainerMine,
@@ -16,33 +15,38 @@ import {
   ContainerNavigateWrapper,
   ContainerNavigateLinksCard,
   ContainerNavigateLink,
-
-  ContainerCardChekWrapper,
-  ContainerCardChekWrapperLeftItem,
-  ContainerCardChekWrapperRightItem,
-  ContainerCardChekBox,
-  ContainerCardChekTitle,
-  ContainerCardChekLinkBg
+  ContainerCardSelect
 } from "./style";
 
-function LogIn() {
-  useActiveInfo("@TomsLider")
-
-
-
+function Register() {
   const [formData, setFormData] = useState({
     login: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    userRole: "",
     password: "",
+    reEnterPassword: ""
   });
 
   const [focusState, setFocusState] = useState({
     login: false,
+    firstName: false,
+    lastName: false,
+    email: false,
+    userRole: false,
     password: false,
+    reEnterPassword: false
   });
 
   const [errorState, setErrorState] = useState({
     login: false,
+    firstName: false,
+    lastName: false,
+    email: false,
+    userRole: false,
     password: false,
+    reEnterPassword: false
   });
 
   const [alertVisible, setAlertVisible] = useState(false);
@@ -53,7 +57,12 @@ function LogIn() {
 
   const inputs = [
     { name: "login", type: "text", label: "Login", mode: "input" },
+    { name: "firstName", type: "text", label: "First name", mode: "input" },
+    { name: "lastName", type: "text", label: "Last name", mode: "input" },
+    { name: "email", type: "email", label: "Email", mode: "input" },
+    { name: "userRole", label: "User role", mode: "select", options: { coder: "Coder", gamer: "Gamer", youtuber: "Youtuber" } },
     { name: "password", type: "password", label: "Password", mode: "input" },
+    { name: "reEnterPassword", type: "password", label: "Re-enter password", mode: "input" }
   ];
 
   const handleFocus = (field) => {
@@ -70,7 +79,6 @@ function LogIn() {
     setFormData((prev) => ({ ...prev, [field]: value }));
     setErrorState((prev) => ({ ...prev, [field]: false }));
   };
-
 
   const hideAlert = () => {
     setAlertVisible(false);
@@ -92,7 +100,7 @@ function LogIn() {
           </ContainerNavigateWrapper>
 
           <ContainerCard>
-            <ContainerCardTitle>Sign in</ContainerCardTitle>
+            <ContainerCardTitle>Registration</ContainerCardTitle>
             <form>
               <ContainerCardInpsWrapper>
                 {inputs.map((input) => (
@@ -100,31 +108,36 @@ function LogIn() {
                     <ContainerCardInpLabelText isFocused={focusState[input.name] || formData[input.name]?.length > 0}>
                       {input.label}
                     </ContainerCardInpLabelText>
-                    <ContainerCardInput
-                      type={input.type}
-                      value={formData[input.name]}
-                      onChange={(e) => handleChange(input.name, e.target.value)}
-                      onFocus={() => handleFocus(input.name)}
-                      onBlur={() => handleBlur(input.name)}
-                      className={errorState[input.name] ? "error" : ""}
-                    />
+                    {input.mode === "input" ? (
+                      <ContainerCardInput
+                        type={input.type}
+                        value={formData[input.name]}
+                        onChange={(e) => handleChange(input.name, e.target.value)}
+                        onFocus={() => handleFocus(input.name)}
+                        onBlur={() => handleBlur(input.name)}
+                        className={errorState[input.name] ? "error" : ""}
+                      />
+                    ) : (
+                      <ContainerCardSelect
+                        value={formData[input.name]}
+                        onChange={(e) => handleChange(input.name, e.target.value)}
+                        onFocus={() => handleFocus(input.name)}
+                        onBlur={() => handleBlur(input.name)}
+                        className={errorState[input.name] ? "error" : ""}
+                      >
+                        <option value=""></option>
+                        {input.options && Object.entries(input.options).map(([key, value]) => (
+                          <option key={key} value={key}>
+                            {value}
+                          </option>
+                        ))}
+                      </ContainerCardSelect>
+                    )}
                   </ContainerCardInpLabel>
                 ))}
               </ContainerCardInpsWrapper>
 
-              <ContainerCardChekWrapper>
-                <ContainerCardChekWrapperLeftItem>
-                  <ContainerCardChekBox type="checkbox" />
-                  <ContainerCardChekTitle>Remember me</ContainerCardChekTitle>
-                </ContainerCardChekWrapperLeftItem>
-                <ContainerCardChekWrapperRightItem>
-                  <ContainerCardChekLinkBg>
-                    <Link to={"/user/login/forgot"}>Forgot</Link>
-                  </ContainerCardChekLinkBg>
-                </ContainerCardChekWrapperRightItem>
-              </ContainerCardChekWrapper>
-
-              <ContainerCardSubButton type="submit" disabled={true}>Login</ContainerCardSubButton>
+              <ContainerCardSubButton disabled={true}>Register</ContainerCardSubButton>
             </form>
           </ContainerCard>
         </ContainerMine>
@@ -135,4 +148,4 @@ function LogIn() {
   );
 }
 
-export default LogIn;
+export default Register;

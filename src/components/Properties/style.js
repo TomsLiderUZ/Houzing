@@ -25,6 +25,7 @@ export const PropContentCardsFilterBg = styled.div`
   margin-top: 64px;
   align-items: end;
   justify-content: center;
+  background-color: yellow;
 
   @media only screen and (max-width: 759px) {
     display: none;
@@ -44,8 +45,19 @@ export const PropContentAllCardsNumber = styled.p`
   padding: 6px 0 0 0;
   box-sizing: border-box;
   position: absolute;
-  left: 0;
-  margin-left: 110px;
+  margin-right: 1050px;
+  background-color: red;
+
+  @media only screen and (max-width: 1396px) {
+    left: 0;
+    margin-right: 0;
+    margin-left: 110px;
+  }
+
+  @media only screen and (max-width: 980px) {
+    margin-left: 50px;
+  }
+
 `;
 
 export const PropContentAllCardsNumberBold = styled.span`
@@ -60,8 +72,20 @@ export const PropContentCardsFilterOptionsWrapper = styled.div`
   justify-content: center;
   align-items: end;
   position: absolute;
-  right: 0;
-  margin-right: 110px;
+  margin-left: 930px;
+  background-color: red;
+
+
+  @media only screen and (max-width: 1396px) {
+    right: 0;
+    margin-left: 0;
+    margin-right: 110px;
+  }
+
+  @media only screen and (max-width: 980px) {
+    margin-right: 50px;
+  }
+
 `;
 
 export const PropContentCardsFilterSelectWrapper = styled.div`

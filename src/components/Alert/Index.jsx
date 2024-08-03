@@ -25,14 +25,14 @@ function Alert({ showAlert, showText, onHide }) {
         setshowAlertStyle2("1");
         setAlertBoxMarginTop("0");
       }, 100);
-      document.querySelector(".Container").style.height = "100vh";
+      document.body.style.overflowY = "hidden";
     } else {
       setshowAlertStyle2("0");
       setTimeout(() => {
         setshowAlertStyle1("none");
         setAlertBoxMarginTop("-1000px");
       }, 500);
-      document.querySelector(".Container").style.height = "max-content";
+      document.body.style.overflowY = "scroll";
     }
   }, [showAlert, showText]);
 
