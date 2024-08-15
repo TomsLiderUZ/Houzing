@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+l1import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import './style.css';
 import SiteLogo from "../SiteLogo/SiteLogo.jsx";
@@ -200,7 +200,7 @@ function Navbar() {
             </div>
             <div className="NavWrapper">
                 <button className="NavItemsBgNavMenuBtn" onClick={changeNavMenu}>
-                    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                    <i class="fa-solid fa-bars" style={{color: "#ffffff"}}></i>
                 </button>
                 <div className="NavItemsBg NavItemsBgLogo">
                     <Link to="/">
