@@ -200,7 +200,7 @@ function Navbar() {
             </div>
             <div className="NavWrapper">
                 <button className="NavItemsBgNavMenuBtn" onClick={changeNavMenu}>
-                    <img src="../../../src/assets/img/navMenu.png" alt="Open menu" />
+                    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
                 </button>
                 <div className="NavItemsBg NavItemsBgLogo">
                     <Link to="/">
