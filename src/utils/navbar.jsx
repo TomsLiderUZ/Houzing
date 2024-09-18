@@ -4,7 +4,7 @@ import NotPage from "../pages/notFound/index"
 import Properties from "../pages/properties/index"
 import Register from "../pages/Register/index"
 import LogIn from "../pages/LogIn/index"
-import UserMe from "../pages/UserMe"
+import UserMe from "../pages/UserLog"
 import UserMeEdit from "../pages/UserMeEdit"
 
 

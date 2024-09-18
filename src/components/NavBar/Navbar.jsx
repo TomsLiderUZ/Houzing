@@ -1,4 +1,4 @@
-l1import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import './style.css';
 import SiteLogo from "../SiteLogo/SiteLogo.jsx";
@@ -33,12 +33,13 @@ function Navbar() {
         const storedEncodedValue = localStorage.getItem("you!Prof_Active_ID-1.1");
         const userName = storedEncodedValue ? atob(storedEncodedValue) : '';
 
+
         const userAccountLog = decryptedAccounts.find(account => account.userName === userName);
 
         if (userAccountLog) {
             handleUserAccount(userAccountLog);
             setAccauntActiveInfo(true)
-        }else{
+        } else {
             setAccauntActiveInfo(false)
         }
     }, [location.pathname]);
@@ -93,6 +94,10 @@ function Navbar() {
         const userAccount = accounts.find(account => account.userName === userName);
         const login = userAccount?.login || '';
 
+        const meName = atob(localStorage.getItem("you!Prof_Active_ID-1.1"));
+        const meAccount = accounts.find(account => account.userName === meName);
+        const meLogin = meAccount?.login || '';
+
         let title = '404 Not Found';
         let homeColor = 'white';
         let propertiesColor = 'white';
@@ -110,12 +115,34 @@ function Navbar() {
         } else if (location.pathname === '/user/register') {
             title = 'Register - Houzing';
         } else if (location.pathname === '/user/me') {
-            title = 'Your profile - Houzing';
+            if (meAccount) {
+                if (location.search.split("?tab=")[1] === 'propertie') {
+                    title = `${meLogin} (Propertie) - Houzing`;
+                }else if (location.search.split("?tab=")[1] === 'followers') {
+                    title = `${meLogin} (Followers) - Houzing`;
+                }else if (location.search.split("?tab=")[1] === 'following') {
+                    title = `${meLogin} (Following) - Houzing`;
+                }else{
+                    title = `${meLogin} - Houzing`;
+                }
+            } else {
+                navigate("/user")
+            }
+        }else if (location.pathname === '/me') {
+            title = `Houzing`;
         } else if (location.pathname === '/user/me/edit') {
             title = 'Edit profile - Houzing';
         } else if (location.pathname.startsWith('/@')) {
             if (userAccount) {
-                title = `${login} - Houzing`;
+                if (location.search.split("?tab=")[1] === 'propertie') {
+                    title = `${login} (Propertie) - Houzing`;
+                }else if (location.search.split("?tab=")[1] === 'followers') {
+                    title = `${login} (Followers) - Houzing`;
+                }else if (location.search.split("?tab=")[1] === 'following') {
+                    title = `${login} (Following) - Houzing`;
+                }else{
+                    title = `${login} - Houzing`;
+                }
             }
         }
 
@@ -200,7 +227,7 @@ function Navbar() {
             </div>
             <div className="NavWrapper">
                 <button className="NavItemsBgNavMenuBtn" onClick={changeNavMenu}>
-                    <i class="fa-solid fa-bars" ></i>
+                    <img src="../../../src/assets/img/navMenu.png" alt="Open menu" />
                 </button>
                 <div className="NavItemsBg NavItemsBgLogo">
                     <Link to="/">

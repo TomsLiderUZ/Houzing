@@ -25,7 +25,6 @@ export const PropContentCardsFilterBg = styled.div`
   margin-top: 64px;
   align-items: end;
   justify-content: center;
-  background-color: yellow;
 
   @media only screen and (max-width: 759px) {
     display: none;
@@ -46,7 +45,6 @@ export const PropContentAllCardsNumber = styled.p`
   box-sizing: border-box;
   position: absolute;
   margin-right: 1050px;
-  background-color: red;
 
   @media only screen and (max-width: 1396px) {
     left: 0;
@@ -73,7 +71,6 @@ export const PropContentCardsFilterOptionsWrapper = styled.div`
   align-items: end;
   position: absolute;
   margin-left: 930px;
-  background-color: red;
 
 
   @media only screen and (max-width: 1396px) {
