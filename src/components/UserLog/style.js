@@ -503,9 +503,16 @@ export const HashInfoModal_Content_Row2 = styled.div`
 export const HashInfoModal_Content_Card = styled.div`
   width: 100%;
   height: 50px;
-  background-color: red;
+  background-color: black;
+  
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   margin-top: 20px;
+  box-sizing: border-box;
+  padding: 0 0 0 50px;
+
+  a{
+    color: white;
+  }
 `;

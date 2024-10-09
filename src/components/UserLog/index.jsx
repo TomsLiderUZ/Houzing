@@ -333,6 +333,8 @@ function UserMe() {
     }
   });
 
+
+
   const MapAllInfoCard = filteredNames.map((name, index) => {
     const account = accounts.find((account) => account.userName === name);
     const login = account ? account.login : null;
@@ -349,6 +351,9 @@ function UserMe() {
   const MapAllInfoResult =
     MapAllInfoCard.length > 0 ? MapAllInfoCard : <p>No results found.</p>;
 
+
+
+
   return (
     <>
       <Container>
@@ -362,7 +367,7 @@ function UserMe() {
                   </HashInfoModal_Top_Row1Title>
                   <HashInfoModal_Top_Row1Item>
                     <HashInfoModal_Top_Row1CloseBtn onClick={backInfoModal}>
-                      <i class="fa-solid fa-xmark"></i>
+                      <i class="fa-solid fa-xmark">x</i>
                     </HashInfoModal_Top_Row1CloseBtn>
                   </HashInfoModal_Top_Row1Item>
                 </HashInfoModal_Top_Row1>
