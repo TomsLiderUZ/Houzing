@@ -10,7 +10,7 @@ export const accounts = [
     email: "lidirgame@gmail.com",
     userRole: "Coder",
     password: "12345678",
-    img: "../../../../../../src/assets/avatars/img_2.jpg",
+    img: "../../../../../../public/assets/avatars/img_2.jpg",
     followers: ["@AniToku", "@ProfGorge", "@AnyBear"],
     following: ["@AniToku"],
   },
@@ -26,7 +26,7 @@ export const accounts = [
     email: "anitoku@gmail.com",
     userRole: "YouTuber",
     password: "12345678",
-    img: "../../../../../../src/assets/avatars/img_3.jpg",
+    img: "../../../../../../public/assets/avatars/img_3.jpg",
     followers: ["@TomsLider"],
     following: ["@TomsLider"],
     properties: []
@@ -41,7 +41,7 @@ export const accounts = [
     email: "gorge0stefnson@gmail.com",
     userRole: "Gamer",
     password: "12345678",
-    img: "../../../../../../src/assets/avatars/img_1.jpg",
+    img: "../../../../../../public/assets/avatars/img_1.jpg",
     followers: [],
     following: ["@TomsLider"],
     properties: []

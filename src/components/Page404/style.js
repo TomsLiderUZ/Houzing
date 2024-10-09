@@ -24,7 +24,7 @@ export const Page404ContentWallWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-image: url("../../src/assets/img/Page404HolleWall_1.png");
+  background-image: url("../../../../public/assets/img/Page404HolleWall_1.png");
   background-size: cover;
   background-position: center;
   cursor: default;
