@@ -339,6 +339,7 @@ function UserMe() {
 
     return login ? (
       <HashInfoModal_Content_Card key={index}>
+        <UserAvatar width={"50"} height={"50"} name={name} />
         <Link to={`/${name}`}>
           {name} ({login})
         </Link>
