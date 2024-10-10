@@ -10,7 +10,7 @@ export const accounts = [
     email: "lidirgame@gmail.com",
     userRole: "Coder",
     password: "12345678",
-    img: "../../../../../../public/assets/avatars/img_2.jpg",
+    img: "./public/assets/avatars/img_2.jpg",
     followers: ["@AniToku", "@ProfGorge", "@AnyBear"],
     following: ["@AniToku"],
   },
