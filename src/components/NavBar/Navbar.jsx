@@ -198,7 +198,7 @@ function Navbar() {
             <div className="NavItemsBgLinksBgMobileWrapper" style={{ opacity: navActive ? '1' : '0', marginTop: navActive ? '0px' : '-1000px' }}>
                 <div className="NavItemsBgLinksBgMobileTop">
                     <button className="NavItemsBgLinksBgMobileCloseBtn" onClick={changeNavMenu}>
-                        <img src="../../../../public/assets/img/navCloseBtn.png" alt="Close menu" />
+                        <img src="./public/assets/img/navCloseBtn.png" alt="Close menu" />
                     </button>
                 </div>
                 <div className="NavItemsBgLinksBgMobileBottomWrapper">
@@ -210,16 +210,16 @@ function Navbar() {
                         </div>
                         <div className="NavItemsBgLinksBgMobileLinkMoresWrapper">
                             <a href="/" className="NavItemsBgLinksBgMobileLinkMoreItemBg">
-                                <img src="../../../../public/assets/icons/facebookDark.svg" alt="Facebook" />
+                                <img src="./public/assets/icons/facebookDark.svg" alt="Facebook" />
                             </a>
                             <a href="/" className="NavItemsBgLinksBgMobileLinkMoreItemBg">
-                                <img src="../../../../public/assets/icons/twitterDark.svg" alt="Twitter" />
+                                <img src="./public/assets/icons/twitterDark.svg" alt="Twitter" />
                             </a>
                             <a href="/" className="NavItemsBgLinksBgMobileLinkMoreItemBg">
-                                <img src="../../../../public/assets/icons/instagramDark.svg" alt="Instagram" />
+                                <img src="./public/assets/icons/instagramDark.svg" alt="Instagram" />
                             </a>
                             <a href="/" className="NavItemsBgLinksBgMobileLinkMoreItemBg">
-                                <img src="../../../../public/assets/icons/linkedinDark.svg" alt="LinkedIn" />
+                                <img src="./public/assets/icons/linkedinDark.svg" alt="LinkedIn" />
                             </a>
                         </div>
                     </div>
@@ -227,7 +227,7 @@ function Navbar() {
             </div>
             <div className="NavWrapper">
                 <button className="NavItemsBgNavMenuBtn" onClick={changeNavMenu}>
-                    <img src="../../../../public/assets/img/navMenu.png" alt="Open menu" />
+                    <img src="./public/assets/img/navMenu.png" alt="Open menu" />
                 </button>
                 <div className="NavItemsBg NavItemsBgLogo">
                     <Link to="/">
@@ -255,7 +255,7 @@ function Navbar() {
                         </div>
                         <div className="NavItemsBgJoinMobile" style={{ display: showButton2 ? "flex" : "none" }}>
                             <Link to="/user/login" className="NavItemsBgJoinIcon">
-                                <img src="../../../../public/assets/img/loginOpen.png" alt="Login icon" className='NavItemsBgJoinIcon' />
+                                <img src="./public/assets/img/loginOpen.png" alt="Login icon" className='NavItemsBgJoinIcon' />
                             </Link>
                         </div>
                     </>
