@@ -459,7 +459,7 @@ function UserMe() {
                   backgroundColor:
                     imgActive || bannedActive ? "black" : backgroundColor,
                   backgroundImage: `url("${
-                    bannedActive ? "./public/assets/img/banned.jpg" : imgSrc
+                    bannedActive ? "/assets/img/banned.jpg" : imgSrc
                   }")`,
                 }}
               >

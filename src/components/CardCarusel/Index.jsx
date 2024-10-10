@@ -25,9 +25,9 @@ function Index({ title, about, minAbout }) {
   );
 
   const cardsAbut = [
-    { id: "1", name: "New Apartment Nice View", about: "Quincy St, Brooklyn, NY, USA", img: "./public/assets/img/carusel_img_4.png", beds: "4", baths: "5", garage: "1", sqft: "1200", oldmony: "2.800", nevmony: "7.500", logo: "./public/assets/img/avatar_1.png"},
-    { id: "2", name: "New Apartment Nice View", about: "Quincy St, Brooklyn, NY, USA", img: "./public/assets/img/carusel_img_2.png", beds: "4", baths: "5", garage: "1", sqft: "1200", oldmony: "2.800", nevmony: "7.500", logo: "./public/assets/img/avatar_2.png"},
-    { id: "3", name: "New Apartment Nice View", about: "Quincy St, Brooklyn, NY, USA", img: "./public/assets/img/carusel_img_5.png", beds: "4", baths: "5", garage: "1", sqft: "1200", oldmony: "2.800", nevmony: "7.500", logo: "./public//assets/img/avatar_3.png"},
+    { id: "1", name: "New Apartment Nice View", about: "Quincy St, Brooklyn, NY, USA", img: "/assets/img/carusel_img_4.png", beds: "4", baths: "5", garage: "1", sqft: "1200", oldmony: "2.800", nevmony: "7.500", logo: "/assets/img/avatar_1.png"},
+    { id: "2", name: "New Apartment Nice View", about: "Quincy St, Brooklyn, NY, USA", img: "/assets/img/carusel_img_2.png", beds: "4", baths: "5", garage: "1", sqft: "1200", oldmony: "2.800", nevmony: "7.500", logo: "/assets/img/avatar_2.png"},
+    { id: "3", name: "New Apartment Nice View", about: "Quincy St, Brooklyn, NY, USA", img: "/assets/img/carusel_img_5.png", beds: "4", baths: "5", garage: "1", sqft: "1200", oldmony: "2.800", nevmony: "7.500", logo: "//assets/img/avatar_3.png"},
   ];
 
   return (

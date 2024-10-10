@@ -48,25 +48,25 @@ function Home() {
 
               <div className="homeContentTopCaruselTextItemRommsAddItemBg">
                 <div className="homeContentTopCaruselTextItemRommsAddItemIconBg">
-                  <img src="../../../../public//assets/icons/bed2.svg" alt="icon" />
+                  <img src="../../.././/assets/icons/bed2.svg" alt="icon" />
                 </div>
                 <p className="homeContentTopCaruselTextItemRommsAddItemTxtBg">4 beds</p>
               </div>
               <div className="homeContentTopCaruselTextItemRommsAddItemBg">
                 <div className="homeContentTopCaruselTextItemRommsAddItemIconBg">
-                  <img src="../../../../public//assets/icons/bath2.svg" alt="icon" />
+                  <img src="../../.././/assets/icons/bath2.svg" alt="icon" />
                 </div>
                 <p className="homeContentTopCaruselTextItemRommsAddItemTxtBg">5 Baths</p>
               </div>
               <div className="homeContentTopCaruselTextItemRommsAddItemBg">
                 <div className="homeContentTopCaruselTextItemRommsAddItemIconBg">
-                  <img src="../../../../public//assets/icons/car2.svg" alt="icon" />
+                  <img src="../../.././/assets/icons/car2.svg" alt="icon" />
                 </div>
                 <p className="homeContentTopCaruselTextItemRommsAddItemTxtBg">1 Garage</p>
               </div>
               <div className="homeContentTopCaruselTextItemRommsAddItemBg">
                 <div className="homeContentTopCaruselTextItemRommsAddItemIconBg">
-                  <img src="../../../../public//assets/icons/ruler2.svg" alt="icon" />
+                  <img src="../../.././/assets/icons/ruler2.svg" alt="icon" />
                 </div>
                 <p className="homeContentTopCaruselTextItemRommsAddItemTxtBg">200 Sq Ft</p>
               </div>
@@ -79,12 +79,12 @@ function Home() {
           </div>
         </div>
         <div className="homeContentTopCaruselImg">
-          <img src="../../../../public//assets/img/carusel_img_1.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 1 ? "1" : "0" }} />
-          <img src="../../../../public//assets/img/carusel_img_2.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 2 ? "1" : "0" }} />
-          <img src="../../../../public//assets/img/carusel_img_3.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 3 ? "1" : "0" }} />
-          <img src="../../../../public//assets/img/carusel_img_4.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 4 ? "1" : "0" }} />
-          <img src="../../../../public//assets/img/carusel_img_2.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 5 ? "1" : "0" }} />
-          <img src="../../../../public//assets/img/carusel_img_3.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 6 ? "1" : "0" }} />
+          <img src="../../.././/assets/img/carusel_img_1.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 1 ? "1" : "0" }} />
+          <img src="../../.././/assets/img/carusel_img_2.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 2 ? "1" : "0" }} />
+          <img src="../../.././/assets/img/carusel_img_3.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 3 ? "1" : "0" }} />
+          <img src="../../.././/assets/img/carusel_img_4.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 4 ? "1" : "0" }} />
+          <img src="../../.././/assets/img/carusel_img_2.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 5 ? "1" : "0" }} />
+          <img src="../../.././/assets/img/carusel_img_3.png" alt="img" width="100%" height="571px" className='homeContentTopCaruselItemImg' style={{ opacity: carusel === 6 ? "1" : "0" }} />
         </div>
         <div className="homeContentTopCaruselControlsBg">
           <div className="homeContentTopCaruselControlsGetUpBtnBg hctccgubb_1">

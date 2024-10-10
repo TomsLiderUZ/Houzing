@@ -220,7 +220,7 @@
   margin-top: 96px;
   background-size: cover;
   background-position: center;
-  background-image: url("./public/assets/img/carusel_img_3.png");
+  background-image: url("/assets/img/carusel_img_3.png");
 }
 
 .homeContentHauseImgMoreAboutsBtnCardTextAndBtnBg {

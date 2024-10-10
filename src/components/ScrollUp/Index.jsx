@@ -32,7 +32,7 @@ function Index() {
 
   return (
     <ScrollUpButtonWrapper onClick={scrollToTop} isVisible={isVisible}>
-      <ScrollUpButtonIcon src="./public/assets/icons/down-arrow.svg" alt="Icon" />
+      <ScrollUpButtonIcon src="/assets/icons/down-arrow.svg" alt="Icon" />
     </ScrollUpButtonWrapper>
   );
 }
