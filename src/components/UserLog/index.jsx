@@ -3,6 +3,7 @@ import { useLocation, Link, useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer.jsx";
 import Alert from "../Alert/Index.jsx";
 import { accounts } from "../Accounts/Accounts.jsx";
+import UserAvatar from "../UserAvatar/UserAvatar.jsx";
 import {
   storeEncryptedData,
   retrieveDecryptedData,
@@ -319,7 +320,6 @@ function UserMe() {
     navigate(location.pathname);
   };
 
-
   const MapAllInfoLocTab =
     tab === "following" ? userInfoAllFollowing : userInfoAllFollowers;
 
@@ -332,8 +332,6 @@ function UserMe() {
       filteredNames.push(name);
     }
   });
-
-
 
   const MapAllInfoCard = filteredNames.map((name, index) => {
     const account = accounts.find((account) => account.userName === name);
@@ -350,9 +348,6 @@ function UserMe() {
 
   const MapAllInfoResult =
     MapAllInfoCard.length > 0 ? MapAllInfoCard : <p>No results found.</p>;
-
-
-
 
   return (
     <>
@@ -466,6 +461,7 @@ function UserMe() {
                 {imgActive || bannedActive ? "" : userLogin}
                 <ContainerCardTopAvatarDisableItem />
               </ContainerCardTopAvatarBg>
+
               <ContainerCardTopProfileInfoBg>
                 <ContainerCardTopProfileInfoName
                   style={{
@@ -530,7 +526,9 @@ function UserMe() {
           </ContainerCardRow_1>
 
           <ContainerCardRow_2>
-            <ContainerCardRow_2_Doc></ContainerCardRow_2_Doc>
+            <ContainerCardRow_2_Doc>
+              <UserAvatar width={"180"} height={"180"} name={"@TomsLider"} />
+            </ContainerCardRow_2_Doc>
           </ContainerCardRow_2>
         </ContainerWrapperCard>
       </Container>
