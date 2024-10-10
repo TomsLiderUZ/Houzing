@@ -198,7 +198,7 @@ function Navbar() {
             <div className="NavItemsBgLinksBgMobileWrapper" style={{ opacity: navActive ? '1' : '0', marginTop: navActive ? '0px' : '-1000px' }}>
                 <div className="NavItemsBgLinksBgMobileTop">
                     <button className="NavItemsBgLinksBgMobileCloseBtn" onClick={changeNavMenu}>
-                        <img src="/assets/img/navCloseBtn.png" alt="Close menu" />
+                        <img src="/assets/img/navCloseBtn.png" alt="X" />
                     </button>
                 </div>
                 <div className="NavItemsBgLinksBgMobileBottomWrapper">
@@ -227,7 +227,7 @@ function Navbar() {
             </div>
             <div className="NavWrapper">
                 <button className="NavItemsBgNavMenuBtn" onClick={changeNavMenu}>
-                    <img src="/assets/img/navMenu.png" alt="Open menu" />
+                    <img src="/assets/img/navMenu.png" alt="=" />
                 </button>
                 <div className="NavItemsBg NavItemsBgLogo">
                     <Link to="/">
