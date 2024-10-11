@@ -591,7 +591,7 @@ export const HashInfoModal_Content_Card_ItemsLeft_Row2 = styled.div`
   flex-wrap: wrap;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 0 10px 0 10px;
+  padding: 0 10px 0 2px;
 `;
 
 export const HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem = styled.div`
