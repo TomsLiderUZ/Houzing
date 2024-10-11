@@ -80,10 +80,4 @@ export const propList = [
             }
         ]
     },
-    {
-        id: 2,
-        userName: "@AniToku",
-        properties: [
-        ]
-    }
 ]

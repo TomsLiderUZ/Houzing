@@ -75,11 +75,13 @@ export const ContainerCardTopProfileInfoName = styled.div`
 
 export const ContainerCardTopProfileInfoActivator = styled.div`
   width: max-content;
-  height: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 10px;
   font-size: 20px;
   color: var(--colorPrimary);
-  margin-top: 10px;
 `;
 
 
@@ -195,16 +197,7 @@ export const ContainerCardTopProfileFollowBtn = styled.button`
 
 
 export const ContainerCardTopProfileUnFollowBtn = styled.button`
-  width: 100%;
-  height: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  background-color: red;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  font-size: 20px;
-  font-weight: 600;
+
 `;
 
 
@@ -496,23 +489,226 @@ export const HashInfoModal_Content_RowSerachInput = styled.input`
 
 export const HashInfoModal_Content_Row2 = styled.div`
   width: 100%;
-  height: 100%;
+  height: 69%;
+  margin-top: 20px;
   /* background-color: red; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0 0 30px 0;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  } 
+  &::-webkit-scrollbar-track {
+    border: 0px;
+    background-color: transparent;
+  }  
+  &::-webkit-scrollbar-thumb {
+    background: var(--bgWrapper);  
+    border-radius: 5000px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;    
+    background: var(--bgWrapper); 
+  }
+`;
+
+export const HashInfoModal_Content_Row2_Item = styled.div`
+  width: 100%;
+  height: max-content;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+`;
+
+export const HashInfoModal_Content_NoReult = styled.div`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
 `;
 
 export const HashInfoModal_Content_Card = styled.div`
   width: 100%;
-  height: 50px;
-  background-color: black;
-  
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-top: 20px;
   box-sizing: border-box;
-  padding: 0 0 0 50px;
+  padding: 0 25px 0 25px;
+  background-color: var(--bgContent);
+`;
+
+
+export const HashInfoModal_Content_Card_ItemsLeft = styled.div`
+  width: 70%;
+  height: 100%;
+  cursor: default;
 
   a{
-    color: white;
+    color: black;
+    width: 100%;
+    height: 100%;
+    transition: all 0.1s linear;
+    outline: 0;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    cursor: default;
   }
+`;
+
+
+export const HashInfoModal_Content_Card_ItemsLeft_Row1 = styled.div`
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+
+export const HashInfoModal_Content_Card_ItemsLeftAvatar = styled.div`
+  border-radius: 5000px;
+  overflow: hidden;
+  width: max-content;
+  height: max-content;
+`;
+
+
+
+export const HashInfoModal_Content_Card_ItemsLeft_Row2 = styled.div`
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 10px 0 10px;
+`;
+
+export const HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem = styled.div`
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--bgWrapper);
+  box-sizing: border-box;
+  padding: 10px 0 0 0;
+`;
+
+export const HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem_Confirm = styled.div`
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  font-size: 13px;
+  color: var(--colorPrimary);
+`;
+
+export const HashInfoModal_Content_Card_ItemsLeft_Row1_BottomItem = styled.div`
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+`;
+
+export const HashInfoModal_Content_Card_ItemsLeft_Row1_BottomItem_Link = styled.button`
+  width: max-content;
+  height: max-content;
+  cursor: pointer !important;
+  border-bottom: 1px solid transparent;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--txtColor);
+    &:hover{
+      color: var(--colorPrimary);
+      border-bottom: 1px solid var(--colorPrimary);
+    }
+    &:focus{
+      color: var(--colorPrimary);
+      border-bottom: 1px solid var(--colorPrimary);
+      outline: 0;
+    }
+`;
+
+
+
+export const HashInfoModal_Content_Card_ItemsRight = styled.div`
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: right;
+  gap: 20px;
+`;
+
+export const HashInfoModal_Content_Card_ItemsRight_Row1 = styled.div`
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const HashInfoModal_Content_Card_ItemsRight_Row1_FollowBtn = styled.button`
+  width: 120px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colorPrimary);
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  border-radius: 5px;
+
+  &:hover{
+    background-color: var(--bgWrapper);
+  }
+
+  &:focus{
+    outline-color: var(--bgWrapper);
+  }
+`;
+
+export const HashInfoModal_Content_Card_ItemsRight_Row1_UnFollowBtn = styled.button`
+
+`;
+
+
+export const HashInfoModal_Content_Card_ItemsRight_Row2 = styled.div`
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+
+export const HashInfoModal_Content_Card_ItemsRight_Row2_RemoveBtn = styled.button`
+  width: max-content;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
 `;

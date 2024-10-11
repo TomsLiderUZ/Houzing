@@ -44,7 +44,23 @@ import {
   HashInfoModal_Content_RowSerachIcon,
   HashInfoModal_Content_RowSerachInput,
   HashInfoModal_Content_Row2,
+  HashInfoModal_Content_Row2_Item,
+  HashInfoModal_Content_NoReult,
   HashInfoModal_Content_Card,
+  HashInfoModal_Content_Card_ItemsLeft,
+  HashInfoModal_Content_Card_ItemsLeft_Row1,
+  HashInfoModal_Content_Card_ItemsLeftAvatar,
+  HashInfoModal_Content_Card_ItemsLeft_Row2,
+  HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem,
+  HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem_Confirm,
+  HashInfoModal_Content_Card_ItemsLeft_Row1_BottomItem,
+  HashInfoModal_Content_Card_ItemsLeft_Row1_BottomItem_Link,
+  HashInfoModal_Content_Card_ItemsRight,
+  HashInfoModal_Content_Card_ItemsRight_Row1,
+  HashInfoModal_Content_Card_ItemsRight_Row1_FollowBtn,
+  HashInfoModal_Content_Card_ItemsRight_Row1_UnFollowBtn,
+  HashInfoModal_Content_Card_ItemsRight_Row2,
+  HashInfoModal_Content_Card_ItemsRight_Row2_RemoveBtn,
 } from "./style.js";
 
 const storageKey = "Pofs_ID-0.1";
@@ -326,29 +342,74 @@ function UserMe() {
   const uniqueUserNames = new Set();
   const filteredNames = [];
 
-  (MapAllInfoLocTab || []).forEach((name) => {
-    if (!uniqueUserNames.has(name)) {
-      uniqueUserNames.add(name);
-      filteredNames.push(name);
+  (MapAllInfoLocTab || []).forEach((login) => {
+    if (!uniqueUserNames.has(login)) {
+      uniqueUserNames.add(login);
+      filteredNames.push(login);
     }
   });
 
-  const MapAllInfoCard = filteredNames.map((name, index) => {
-    const account = accounts.find((account) => account.userName === name);
-    const login = account ? account.login : null;
+  const MapAllInfoCard = filteredNames.map((login, index) => {
+    const account = accounts.find((account) => account.userName === login);
+    const name = account ? account.login : null;
 
-    return login ? (
+    return name ? (
       <HashInfoModal_Content_Card key={index}>
-        <UserAvatar width={"50"} height={"50"} name={name} />
-        <Link to={`/${name}`}>
-          {name} ({login})
-        </Link>
+        <HashInfoModal_Content_Card_ItemsLeft>
+          <Link to={`/${login}`}>
+            <HashInfoModal_Content_Card_ItemsLeft_Row1>
+              <HashInfoModal_Content_Card_ItemsLeftAvatar>
+                <UserAvatar
+                  width={"50"}
+                  height={"50"}
+                  font={"120%"}
+                  name={login}
+                />
+              </HashInfoModal_Content_Card_ItemsLeftAvatar>
+            </HashInfoModal_Content_Card_ItemsLeft_Row1>
+            <HashInfoModal_Content_Card_ItemsLeft_Row2>
+              <HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem>
+                {name}
+                {userConfirmedGet && (
+                  <HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem_Confirm title="Confirmed">
+                    <i className="fa-solid fa-circle-check"></i>
+                  </HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem_Confirm>
+                )}
+              </HashInfoModal_Content_Card_ItemsLeft_Row1_TopItem>
+              <HashInfoModal_Content_Card_ItemsLeft_Row1_BottomItem>
+                <HashInfoModal_Content_Card_ItemsLeft_Row1_BottomItem_Link>
+                  {login}
+                </HashInfoModal_Content_Card_ItemsLeft_Row1_BottomItem_Link>
+              </HashInfoModal_Content_Card_ItemsLeft_Row1_BottomItem>
+            </HashInfoModal_Content_Card_ItemsLeft_Row2>
+          </Link>
+        </HashInfoModal_Content_Card_ItemsLeft>
+        <HashInfoModal_Content_Card_ItemsRight>
+          <HashInfoModal_Content_Card_ItemsRight_Row1>
+            <HashInfoModal_Content_Card_ItemsRight_Row1_FollowBtn>
+              Follow
+            </HashInfoModal_Content_Card_ItemsRight_Row1_FollowBtn>
+          </HashInfoModal_Content_Card_ItemsRight_Row1>
+          {location.search === "?tab=following" ? null : (
+            <HashInfoModal_Content_Card_ItemsRight_Row2>
+              <HashInfoModal_Content_Card_ItemsRight_Row2_RemoveBtn>
+                <i class="fa-solid fa-xmark">x</i>
+              </HashInfoModal_Content_Card_ItemsRight_Row2_RemoveBtn>
+            </HashInfoModal_Content_Card_ItemsRight_Row2>
+          )}
+        </HashInfoModal_Content_Card_ItemsRight>
       </HashInfoModal_Content_Card>
     ) : null;
   });
 
   const MapAllInfoResult =
-    MapAllInfoCard.length > 0 ? MapAllInfoCard : <p>No results found.</p>;
+    MapAllInfoCard.length > 0 ? (
+      MapAllInfoCard
+    ) : (
+      <HashInfoModal_Content_NoReult>
+        No results found.
+      </HashInfoModal_Content_NoReult>
+    );
 
   return (
     <>
@@ -438,7 +499,9 @@ function UserMe() {
                   </HashInfoModal_Content_RowSerachWrapper>
                 </HashInfoModal_Content_Row1>
                 <HashInfoModal_Content_Row2>
-                  {MapAllInfoResult}
+                  <HashInfoModal_Content_Row2_Item>
+                    {MapAllInfoResult}
+                  </HashInfoModal_Content_Row2_Item>
                 </HashInfoModal_Content_Row2>
               </HashInfoModal_Content>
             </HashInfoModal>
@@ -464,13 +527,7 @@ function UserMe() {
               </ContainerCardTopAvatarBg>
 
               <ContainerCardTopProfileInfoBg>
-                <ContainerCardTopProfileInfoName
-                  style={{
-                    textDecoration: bannedActive
-                      ? "line-through solid red"
-                      : "none",
-                  }}
-                >
+                <ContainerCardTopProfileInfoName>
                   {userAccount?.login}
                   {userConfirmedGet && (
                     <ContainerCardTopProfileInfoActivator title="Confirmed">
@@ -528,7 +585,12 @@ function UserMe() {
 
           <ContainerCardRow_2>
             <ContainerCardRow_2_Doc>
-              <UserAvatar width={"180"} height={"180"} name={"@TomsLider"} />
+              <UserAvatar
+                width={"180"}
+                height={"180"}
+                font={"450%"}
+                name={`${userAccount?.userName}`}
+              />
             </ContainerCardRow_2_Doc>
           </ContainerCardRow_2>
         </ContainerWrapperCard>
