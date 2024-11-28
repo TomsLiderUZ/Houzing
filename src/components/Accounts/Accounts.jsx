@@ -63,7 +63,7 @@ export const accounts = [
   },
   {
     id: 5,
-    banned: true,
+    banned: false,
     userName: "@Dipley",
     login: "Dipleyjon",
     firstName: "Murod",
