@@ -26,7 +26,7 @@ import {
 } from "./style";
 
 function LogIn() {
-  useActiveInfo("@TomsLider")
+  useActiveInfo("@BOT_10")
 
 
 
